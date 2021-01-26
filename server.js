@@ -2,7 +2,7 @@ const express = require("express");
 const https = require("https");
 const app = express();
 
-const port = process.env.PORT ;
+const port = process.env.PORT ||5000 ;
 app.use(express.json());
 
 app.get("/",  (req, res) => { res.send('welcome to my solution')} );
@@ -38,4 +38,4 @@ app.get("/api/rates", (req, res) => {
   }
 });
 
-app.listen(5000, () => console.log("listening on port" + port));
+app.listen(port, () => console.log("listening on port" + port));
