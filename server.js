@@ -5,6 +5,7 @@ const app = express();
 const port = process.env.PORT || 3111;
 app.use(express.json());
 
+app.get("/",  (req, res) => { res.send('welcome to my solution')}
 app.get("/api/rates", (req, res) => {
   
   if (req.query.base !== null || "") {
