@@ -23,7 +23,7 @@ app.get("/api/rates", (req, res) => {
          resp.on('end', async ()=>{    
              currencyData = await JSON.parse(str);
              
-             res.json({results:currencyData, base:req.query.base, date:currencyData.date, rates:{currency:req.query.currency}, });
+             res.json({results:currencyData });
         })
           
         }
