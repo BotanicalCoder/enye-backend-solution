@@ -8,7 +8,7 @@ app.use(express.json());
 app.get("/",  (req, res) => { res.send('welcome to my solution')} );
 app.get("/api/rates", (req, res) => {
   
-  if (req.query.base !== null || "") {
+  if (req.query.base !== null || "" || undefined) {
     let str = '';
     let currencyData ;
     https
